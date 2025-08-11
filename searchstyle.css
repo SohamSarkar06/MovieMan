@@ -4,8 +4,8 @@
 
   body {
     margin: 0;
-    background: #121212;
-    color: #eee;
+    background: url('https://i.postimg.cc/vZKYLqTm/87225370c8bc9345952a6e81bd5d2625.jpg') no-repeat center center fixed;
+      background-size: cover;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;
@@ -29,7 +29,7 @@
   }
 
   #tagline {
-    color: #bbb;
+    color: #b96d6d;
     margin-bottom: 24px;
     font-style: italic;
   }
@@ -39,7 +39,7 @@
     color: #ff3b3b;
     border: none;
     padding: 10px 18px;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 0.9rem;
     border-radius: 6px;
     cursor: pointer;
