@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 
     body {
+     background: url('https://i.postimg.cc/9QPSc1wf/Picsart-25-08-12-00-32-18-615.jpg') no-repeat center center fixed;
+      background-size: cover;
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0; padding: 0;
   min-height: 100vh;
@@ -11,11 +13,9 @@
   overflow-x: hidden;
 
   /* Cinematic starry background */
-  background:
-    radial-gradient(circle at center, #1b2735 0%, #090a0f 80%);
-  position: relative;
+  
   color: white;
-  animation: backgroundGlow 20s ease-in-out infinite alternate;
+  
 }
 
 /* Star twinkle effect */
@@ -54,7 +54,7 @@ body::before {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #222;
+      background: rgba(0,0,0,0.8);
       padding: 10px 20px;
       position: sticky;
       top: 0;
@@ -66,45 +66,43 @@ body::before {
       font-size: 1.8rem;
       font-weight: 900;
       letter-spacing: 1px;
-      background: linear-gradient(90deg, #a75b35, #ac8b64);
+      background: linear-gradient(90deg, #d8471b, #901811);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 2px #ef878188;
       cursor: default;
-      transition: text-shadow 0.3s ease;
+      padding-left: 20px;
+      
     }
-    #siteTitle:hover {
-      text-shadow:
-        0 0 10px #ffd200cc,
-        0 0 20px #f7971e88,
-        0 0 30px #ffd200cc;
-    }
+    
     button {
-      background: #007bff;
+      background: #353634;
       border: none;
-      color: white;
+      color: rgb(190, 180, 180);
       padding: 8px 16px;
+      padding-right: 10px;
       cursor: pointer;
       font-size: 14px;
       border-radius: 4px;
+      font-weight: bold;
       transition: background 0.3s ease, transform 0.2s ease;
       margin-left: 12px;
-      box-shadow: 0 3px 8px rgba(0,123,255,0.5);
+      
       user-select: none;
     }
     button:hover,
     button:focus {
-      background: #0056b3;
+      background: #4b4f4c;
       transform: scale(1.05);
       outline: none;
       box-shadow:
-        0 0 8px #0056b3,
-        0 0 12px #007bffaa;
+        0 0 8px #575a57,
+        0 0 10px #969896aa;
     }
     /* Marquee banner below header */
     #promoBanner {
       width: 100%;
-      background: #1a1a1a;
+      background: rgba(0,0,0,0.5);
       color: #f7971e;
       font-weight: 700;
       font-size: 1rem;
@@ -118,7 +116,7 @@ body::before {
     #promoBanner span {
       display: inline-block;
       padding-left: 100%;
-      animation: marquee 15s linear infinite;
+      animation: marquee 30s linear infinite;
     }
     @keyframes marquee {
       0% { transform: translateX(0); }
@@ -146,31 +144,40 @@ body::before {
       margin-top: 40px;
       font-weight: 900;
       letter-spacing: 3px;
-      
-      background: linear-gradient(90deg, #a75b35, #ac8b64);
+      text-shadow: 0 0 1.5px #cda3a388;
+      background: linear-gradient(90deg, #e1ae91, #9b978b);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: center;
       max-width: 400px;
       user-select: text;
+      transition: text-shadow 0.3s ease;
     }
     p.intro-subtitle {
       font-size: 1.4rem;
       margin: 12px 0 18px;
-      color: #bbb;
-      font-style: italic;
+      color: #b7ab8d;
+      
       max-width: 420px;
       text-align: center;
       user-select: text;
+      font-weight: bold;
+    }
+    h1.intro-title:hover {
+      text-shadow:
+        0 0 5px #ffd200cc,
+        0 0 10px #f7971e88,
+        0 0 15px #ffd200cc;
     }
     p.intro-description {
       font-size: 1.05rem;
-      color: #ccc;
+      color: #decb97;
       max-width: 420px;
       margin-bottom: 36px;
       line-height: 1.5;
       text-align: center;
       user-select: text;
+      font-weight: bold;
     }
     h2 {
       margin-top: 40px;
