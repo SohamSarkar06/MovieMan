@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+    body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  overflow-x: hidden;
+
+  /* Cinematic starry background */
+  background:
+    radial-gradient(circle at center, #1b2735 0%, #090a0f 80%);
+  position: relative;
+  color: white;
+  animation: backgroundGlow 20s ease-in-out infinite alternate;
+}
+
+/* Star twinkle effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><circle cx="50" cy="50" r="1.5" fill="white" fill-opacity="0.3"/><circle cx="100" cy="150" r="1" fill="white" fill-opacity="0.2"/><circle cx="150" cy="75" r="1" fill="white" fill-opacity="0.25"/><circle cx="25" cy="125" r="1.2" fill="white" fill-opacity="0.3"/></svg>') repeat;
+  background-size: 100px 100px;
+  animation: twinkle 10s linear infinite;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+/* Animate a slow glow to add depth */
+@keyframes backgroundGlow {
+  0% {
+    background-position: center center;
+    filter: brightness(1);
+  }
+  100% {
+    background-position: center 20%;
+    filter: brightness(1.15);
+  }
+}
+
+/* Twinkling stars animation */
+@keyframes twinkle {
+  0%, 100% {opacity: 0.8;}
+  50% {opacity: 1;}
+}
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 110;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      user-select: none;
+    }
+ #siteTitle {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #a75b35, #ac8b64);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 2px #ef878188;
+      cursor: default;
+      transition: text-shadow 0.3s ease;
+    }
+    #siteTitle:hover {
+      text-shadow:
+        0 0 10px #ffd200cc,
+        0 0 20px #f7971e88,
+        0 0 30px #ffd200cc;
+    }
+    button {
+      background: #007bff;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 4px;
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-left: 12px;
+      box-shadow: 0 3px 8px rgba(0,123,255,0.5);
+      user-select: none;
+    }
+    button:hover,
+    button:focus {
+      background: #0056b3;
+      transform: scale(1.05);
+      outline: none;
+      box-shadow:
+        0 0 8px #0056b3,
+        0 0 12px #007bffaa;
+    }
+    /* Marquee banner below header */
+    #promoBanner {
+      width: 100%;
+      background: #1a1a1a;
+      color: #f7971e;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 6px 0;
+      box-shadow: inset 0 -2px 4px #f7971e88;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      user-select: none;
+    }
+    #promoBanner span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    /* Content styling applied directly to elements */
+    main {
+      /* optional if you want max width and center */
+      max-width: 420px;
+      width: 100%;
+      padding: 20px 20px 40px;
+      box-sizing: border-box;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 0.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    h1.intro-title {
+      font-size: 3.4rem;
+      margin-top: 40px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      
+      background: linear-gradient(90deg, #a75b35, #ac8b64);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      max-width: 400px;
+      user-select: text;
+    }
+    p.intro-subtitle {
+      font-size: 1.4rem;
+      margin: 12px 0 18px;
+      color: #bbb;
+      font-style: italic;
+      max-width: 420px;
+      text-align: center;
+      user-select: text;
+    }
+    p.intro-description {
+      font-size: 1.05rem;
+      color: #ccc;
+      max-width: 420px;
+      margin-bottom: 36px;
+      line-height: 1.5;
+      text-align: center;
+      user-select: text;
+    }
+    h2 {
+      margin-top: 40px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      max-width: 420px;
+      text-align: center;
+      user-select: text;
+    }
+    label {
+      display: block;
+      margin: 18px 0 6px;
+      font-weight: 600;
+      max-width: 420px;
+      text-align: left;
+      user-select: text;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 17px;
+      box-sizing: border-box;
+      margin-bottom: 14px;
+      display: block;
+      transition: box-shadow 0.3s ease;
+      user-select: text;
+    }
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      box-shadow: 0 0 8px #f7971eaa;
+    }
+    .message {
+      margin-top: 18px;
+      font-size: 15px;
+      color: #0f0;
+      min-height: 22px;
+      max-width: 420px;
+      text-align: center;
+      user-select: text;
+      transition: color 0.3s ease;
+    }
+    .message.error {
+      color: #f55;
+    }
+    .link-button {
+      background: none;
+      border: none;
+      color: #0af;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 14.5px;
+      padding: 0;
+      margin-top: 12px;
+      display: inline-block;
+      max-width: 420px;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+    .link-button:hover,
+    .link-button:focus {
+      color: #44bbff;
+      outline: none;
+    }
