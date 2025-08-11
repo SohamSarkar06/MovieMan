@@ -303,7 +303,7 @@ async function generateChatResponseAI(userText) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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'
+        'Authorization': 'Bearer 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'
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini',  // or 'gpt-3.5-turbo'
