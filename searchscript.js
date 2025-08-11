@@ -69,7 +69,7 @@ function appendMessage(text, fromUser = false) {
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
-// Get random joke
+
 function getRandomJoke() {
   return jokes[Math.floor(Math.random() * jokes.length)];
 }
