@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - MovieMania</title>
+  <link rel="stylesheet" href="dashboardstyle.css">
+</head>
+<body>
+  <header>
+    <h1 id="siteTitle">Welcome to MovieMan !</h1>
+    <div class="header-buttons">
+      <div class="watchlist-dropdown" >
+        <button id="watchlistBtn" style="min-height:56px; font-weight: 700;">
+          📌 Your Watchlist ▼
+        </button>
+        <div id="watchlistDropdown">
+          <!-- Watchlist items will render here -->
+        </div>
+      </div>
+
+      <button id="botBtn" style="font-weight: 700;">MovieMan Bot</button>
+      <button id="logoutBtn" style="font-weight: 700;">Logout</button>
+    </div>
+  </header>
+  
+  <main>
+    <div class="content">
+      <div class="lang-tabs" id="languageTabs" aria-label="Select preferred movie languages"></div>
+      <button id="showMoviesBtn" aria-live="polite" aria-atomic="true">Show Movies</button>
+      <div id="moviesList" aria-live="polite" aria-atomic="true"></div>
+    </div>
+    <aside class="ai-assistant">
+      <h2>MovieMan AI Assistant Recommendations</h2>
+      <div id="aiRecommendations">Loading recommendations...</div>
+    </aside>
+  </main>
+
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+ <script src="dashboardscript.js"></script>
+</body>
+</html>
