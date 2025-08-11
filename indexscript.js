@@ -26,32 +26,7 @@
       elements.forEach(el => document.body.appendChild(el));
     }
 
-    function renderIntro() {
-      clearContent();
-
-      const main = document.createElement('main');
-      main.setAttribute('role', 'main');
-
-      const h1 = document.createElement('h1');
-      h1.className = "intro-title";
-      h1.textContent = "MovieMan";
-
-      const pSub = document.createElement('p');
-      pSub.className = "intro-subtitle";
-      pSub.textContent = "Watch and enjoy";
-
-      const pDesc = document.createElement('p');
-      pDesc.className = "intro-description";
-      pDesc.innerHTML = "Get personalized movie recommendations through our AI assistant.<br>Your next favorite movie is just a click away!";
-
-      main.appendChild(h1);
-      main.appendChild(pSub);
-      main.appendChild(pDesc);
-
-      document.body.appendChild(main);
-
-      currentView = "intro";
-    }
+    
 
     function renderLoginForm() {
       clearContent();
