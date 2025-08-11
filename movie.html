@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Details - MovieMania</title>
+  <link rel="stylesheet" href="moviestyle.css">
+</head>
+<body>
+  <a href="dashboard.html" class="back">← Back to Dashboard</a>
+  <div class="container">
+    <section class="movie-info">
+      <h1 id="movieTitle">Loading...</h1>
+      <p id="movieOverview"></p>
+      <div id="videoWrapper">
+        Loading trailer...
+      </div>
+      <div id="castDirectorsSection">
+        <div>
+          <div class="subheading">Directors:</div>
+          <ul id="directorsList"><li>Loading...</li></ul>
+        </div>
+        <div>
+          <div class="subheading">Cast:</div>
+          <ul id="castList"><li>Loading...</li></ul>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <aside class="reviews">
+      <div id="avgRating" class="avg-rating">Loading ratings...</div>
+
+      <div id="reviewsList">Loading reviews...</div>
+
+      <hr style="margin: 16px 0; border-color: #333;">
+
+      <h3>Add your review & rating</h3>
+      <label for="myRating">Your Rating (1-5):</label>
+      <select id="myRating">
+        <option value="">Select rating</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      <textarea id="myReview" placeholder="Write your review here..."></textarea>
+
+      <button id="submitReviewBtn" class="btn">Submit Review</button>
+    </aside>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script src="moviescript.js"></script>
+</body></body>
+</html>
