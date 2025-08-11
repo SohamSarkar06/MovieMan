@@ -1,7 +1,7 @@
  /* Base & Layout */
     body {
-      background: #1e2124;
-      color: #e0e0e0;
+      background: url('https://i.postimg.cc/pXyJ1rkL/a6cabf1ecd2499e8f79d24a2569303cb.jpg') no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0; padding: 24px 32px;
       min-height: 100vh;
@@ -13,12 +13,13 @@
     }
     header {
       display: flex;
+      background-color: rgba(0,0,0,0.8);
       justify-content: space-between;
       align-items: center;
-      background: #2c3035;
+    
       padding: 14px 28px;
       border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4);
       position: relative;
       z-index: 10;
     }
@@ -111,13 +112,13 @@
     }
     aside.ai-assistant {
       flex: 0 0 320px;
-      background: #2c3035;
+      background-color:  rgba(0,0,0,0.7);
       padding: 20px;
       border-radius: 10px;
       max-height: 100%;
       overflow-y: auto;
       color: #eaeaea;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
       max-width: 50%;
       user-select: text;
     }
@@ -212,10 +213,10 @@
       user-select: none;
     }
     .movie-card {
-      background: #2c3035;
+      background-color:  rgba(92, 67, 67, 0.9);
       padding: 18px;
       border-radius: 10px;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.8);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.3);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -227,7 +228,7 @@
       cursor: pointer;
     }
     .movie-card.clickable:hover {
-      background-color: #ff6b6b22;
+      background-color: rgba(0,0,0,0.8);
     }
     .movie-title {
       font-weight: 700;
