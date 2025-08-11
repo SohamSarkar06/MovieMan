@@ -1,6 +1,8 @@
    body {
-      background: #0f0f10;
-      color: #fff;
+    
+
+      background: url('https://i.postimg.cc/NM18hCzs/download-15.jpg') no-repeat center center fixed;
+      background-size: cover;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
@@ -11,9 +13,10 @@
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 24px;
+      
     }
     .movie-info {
-      background: #121214;
+      background-color: rgba(0,0,0,0.4);
       padding: 16px;
       border-radius: 8px;
     }
@@ -27,6 +30,11 @@
     h1 {
       margin-top: 0;
       margin-bottom: 12px;
+      color: #ccc;
+      font-weight: bold;
+    }
+    #movieOverview{
+      color: #bbb ;
     }
     .subheading {
       font-weight: bold;
@@ -38,28 +46,33 @@
       list-style: none;
       padding-left: 0;
       margin: 0;
+      color: #ccc;
     }
     ul li {
       margin-bottom: 4px;
+      color: #ccc;
     }
     .reviews {
-      background: #121214;
+      background-color: rgba(0,0,0,0.4);
       padding: 16px;
       border-radius: 8px;
       max-height: 640px;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
+      color: #ccc;
     }
     .avg-rating {
       font-weight: bold;
       font-size: 1.1rem;
       color: #ffcc00;
       margin-bottom: 12px;
+      color: #ccc;
     }
     .review {
       border-bottom: 1px solid #222;
       padding: 8px 0;
+      background-color: rgba(0,0,0,0.4);
     }
     .review .meta {
       font-size: 0.85rem;
